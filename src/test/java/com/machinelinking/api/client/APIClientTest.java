@@ -84,6 +84,10 @@ public class APIClientTest {
         final Keyword superman = filterBySense(annotation.getKeywords(), "Superman");
         Assert.assertTrue(superman.getRel() > 0.6);
         Assert.assertEquals("Superman", superman.getSensePage());
+        Assert.assertTrue(
+                "Invalid sense probability.",
+                superman.getSenseProbability() > 0 && superman.getSenseProbability() < 1
+        );
         Assert.assertEquals("Superman", superman.getForm());
         Assert.assertEquals(2, superman.getNGrams().length);
         Assert.assertTrue(superman.getAbstract().length() > 100);
