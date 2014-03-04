@@ -24,7 +24,7 @@ This repo provides the official Java client for the [MachineLinking](http://mach
 <dependency>
     <groupId>com.machinelinking</groupId>
     <artifactId>api-client</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
 </dependency>
 ```
 
