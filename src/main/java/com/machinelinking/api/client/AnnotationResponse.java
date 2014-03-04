@@ -21,6 +21,7 @@ import java.util.Arrays;
 /**
  * Models an annotation from the <i>MachineLinking</i> <b>/annotate</b> service.
  *
+ * @see {@link com.machinelinking.api.client.APIClient#annotate(String, java.util.Map)}
  * @author Michele Mostarda (michele@machinelinking.com)
  */
 public class AnnotationResponse implements Response {
@@ -29,11 +30,14 @@ public class AnnotationResponse implements Response {
 
     private final Keyword[] keywords;
 
+    private final Topic[] topics;
+
     private final int cost;
 
-    public AnnotationResponse(String lang, Keyword[] keywords, int cost) {
+    public AnnotationResponse(String lang, Keyword[] keywords, Topic[] topics, int cost) {
         this.lang = lang;
         this.keywords = keywords;
+        this.topics = topics;
         this.cost = cost;
     }
 
@@ -51,9 +55,12 @@ public class AnnotationResponse implements Response {
         return keywords;
     }
 
+    public Topic[] getTopics() {
+        return topics;
+    }
+
     @Override
     public String toString() {
         return String.format("lang: [%s], keywords: %s", lang, Arrays.toString(keywords));
     }
-
 }

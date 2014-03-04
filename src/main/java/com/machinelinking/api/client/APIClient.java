@@ -254,6 +254,22 @@ public class APIClient {
         return response;
     }
 
+
+    private Topic[] toTopics(JSONArray topicsJSON) throws JSONException {
+        if(topicsJSON == null) return new Topic[0];
+        JSONObject topicJSON;
+        final Topic[] topics = new Topic[topicsJSON.length()];
+        for (int i = 0; i < topics.length; i++) {
+            topicJSON = topicsJSON.getJSONObject(i);
+            topics[i] = new Topic(
+                    topicJSON.getString("label"),
+                    toURLOrFail(topicJSON.getString("url")),
+                    (float) topicJSON.getDouble("prob")
+            );
+        }
+        return topics;
+    }
+
     private NGram[] toNGrams(JSONArray ngramsArray) throws JSONException {
         JSONObject span;
         final NGram[] response = new NGram[ngramsArray.length()];
@@ -297,7 +313,7 @@ public class APIClient {
             JSONArray keywordsJSON = annotation.getJSONArray("keyword");
             JSONObject keywordJSON, sense;
             Keyword keyword;
-            Keyword[] keywords = new Keyword[keywordsJSON.length()];
+            final Keyword[] keywords = new Keyword[keywordsJSON.length()];
             for(int i = 0; i < keywordsJSON.length(); i++) {
                 keywordJSON = keywordsJSON.getJSONObject(i);
                 sense = keywordJSON.optJSONObject("sense");
@@ -312,12 +328,13 @@ public class APIClient {
                         toExternals(keywordJSON.optJSONArray("external")),
                         toAlts(keywordJSON.optJSONArray("alt")),
                         toCrosses(keywordJSON.optJSONArray("cross")),
+                        toTopics(keywordJSON.optJSONArray("topic")),
                         toNGrams(keywordJSON.getJSONArray("ngram")),
                         toImages(keywordJSON.optJSONArray("image"))
                 );
                 keywords[i] = keyword;
             }
-            return new AnnotationResponse(lang, keywords, cost);
+            return new AnnotationResponse(lang, keywords, toTopics(annotation.getJSONArray("topic")), cost);
         } catch (JSONException jsone) {
             throw new APIClientException("An error occurred while parsing the /annotate JSON data.", jsone);
         }

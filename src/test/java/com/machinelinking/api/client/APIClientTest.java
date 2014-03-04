@@ -80,6 +80,7 @@ public class APIClientTest {
         final AnnotationResponse annotation = client.annotate(ANNOTATE_TEXT_SAMPLE);
         Assert.assertEquals("en", annotation.getLang());
         Assert.assertTrue(annotation.getKeywords().length >= 10);
+        Assert.assertTrue(annotation.getTopics().length >= 1);
 
         final Keyword superman = filterBySense(annotation.getKeywords(), "Superman");
         assertConfidence("Rel", superman.getRel());
@@ -92,6 +93,7 @@ public class APIClientTest {
         Assert.assertTrue(superman.getCategories().length > 10);
         Assert.assertTrue(superman.getExternals().length > 1);
         Assert.assertTrue(superman.getCrosses().length > 5);
+        Assert.assertTrue(superman.getTopics().length > 2);
         Assert.assertTrue(superman.getAlts().length > 10);
         Assert.assertTrue(superman.getImages().length > 5);
     }
