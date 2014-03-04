@@ -20,7 +20,7 @@
 
     <groupId>com.machinelinking</groupId>
     <artifactId>api-client</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
 
     <name>MachineLinking API Client</name>
     <description>Java API client for MachineLinking API.</description>
@@ -53,7 +53,7 @@
             scm:git:https://github.com/michelemostarda/machinelinking-api-client.git
         </developerConnection>
         <url>http://machinelinking.com/</url>
-      <tag>HEAD</tag>
+      <tag>api-client-1.2</tag>
   </scm>
 
     <distributionManagement>
