@@ -27,13 +27,13 @@ public class Clazz {
 
     private final String label;
     private final URL url;
-    private final String resouce;
+    private final String resource;
     private final double prob;
 
     public Clazz(String label, URL url, String resource, double prob) {
         this.label = label;
         this.url = url;
-        this.resouce = resource;
+        this.resource = resource;
         this.prob = prob;
     }
 
@@ -46,7 +46,7 @@ public class Clazz {
     }
 
     public String getResource() {
-        return resouce;
+        return resource;
     }
 
     public double getProb() {
@@ -55,7 +55,7 @@ public class Clazz {
 
     @Override
     public String toString() {
-        return String.format("label: [%s], url: %s, resource: %s, prob: %f", label, url, resouce, prob);
+        return String.format("label: [%s], url: %s, resource: %s, prob: %f", label, url, resource, prob);
     }
 
 }
