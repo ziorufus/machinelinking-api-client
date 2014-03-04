@@ -82,12 +82,9 @@ public class APIClientTest {
         Assert.assertTrue(annotation.getKeywords().length >= 10);
 
         final Keyword superman = filterBySense(annotation.getKeywords(), "Superman");
-        Assert.assertTrue(superman.getRel() > 0.6);
+        assertConfidence("Rel", superman.getRel());
         Assert.assertEquals("Superman", superman.getSensePage());
-        Assert.assertTrue(
-                "Invalid sense probability.",
-                superman.getSenseProbability() > 0 && superman.getSenseProbability() < 1
-        );
+        assertConfidence("Sense Probability", superman.getSenseProbability());
         Assert.assertEquals("Superman", superman.getForm());
         Assert.assertEquals(2, superman.getNGrams().length);
         Assert.assertTrue(superman.getAbstract().length() > 100);
@@ -118,11 +115,20 @@ public class APIClientTest {
         }
     }
 
+    private void assertConfidence(String description , float value) {
+        Assert.assertTrue(
+                String.format("Invalid value for [%s]", description),
+                value >= 0 && value <= 1
+        );
+    }
+
     private Keyword filterBySense(Keyword[] keywords, String sense) {
         for(Keyword keyword : keywords) {
             if(sense.equals(keyword.getSensePage())) return keyword;
         }
         throw new IllegalStateException("Invalid test preconditions.");
     }
+
+
 
 }
