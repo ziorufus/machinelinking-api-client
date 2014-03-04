@@ -16,7 +16,7 @@
 package com.machinelinking.api.client;
 
 /**
- * Defines an alternative form in annotation.
+ * Alternative form in annotation.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */

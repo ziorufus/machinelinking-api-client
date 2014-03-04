@@ -16,8 +16,6 @@
 
 package com.machinelinking.api.client;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Arrays;
 
 /**
@@ -40,6 +38,7 @@ public class Keyword {
     private final External[] externals;
     private final Alt[] alts;
     private final Cross[] crosses;
+    private final Topic[] topics;
     private final Image[] images;
 
     private NGram[] nGrams;
@@ -55,6 +54,7 @@ public class Keyword {
             External[] externals,
             Alt[] alts,
             Cross[] crosses,
+            Topic[] topics,
             NGram[] nGrams,
             Image[] images
     ) {
@@ -67,6 +67,7 @@ public class Keyword {
         this.categories = categories;
         this.alts = alts;
         this.crosses = crosses;
+        this.topics = topics;
         this.externals = externals;
         this.nGrams = nGrams;
         this.images = images;
@@ -108,9 +109,9 @@ public class Keyword {
         return alts;
     }
 
-    public Cross[] getCrosses() {
-        return crosses;
-    }
+    public Cross[] getCrosses() {return crosses;}
+
+    public Topic[] getTopics() { return topics; }
 
     public NGram[] getNGrams() {
         return nGrams;
@@ -128,16 +129,6 @@ public class Keyword {
                 form, rel, sensePage, senseProbability,
                 Arrays.toString(images), Arrays.toString(classes), Arrays.toString(categories)
         );
-    }
-
-    private URL parseURLorFail(String urlTxt) {
-        try {
-            return new URL(urlTxt);
-        } catch (MalformedURLException murle) {
-            throw new IllegalStateException(
-                    String.format("Illegal field content in API response. Expected URL, found: [%s]", urlTxt )
-            );
-        }
     }
 
 }

@@ -19,6 +19,7 @@ package com.machinelinking.api.client;
 /**
  * Response for <i>lang</i> method.
  *
+ * @see {@link com.machinelinking.api.client.APIClient#guessLanguage(String, java.util.Map)} )}
  * @author Michele Mostarda (michele@machinelinking.com)
  */
 public class GuessedLanguageResponse implements Response {

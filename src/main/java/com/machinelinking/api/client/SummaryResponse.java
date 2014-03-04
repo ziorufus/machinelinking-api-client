@@ -17,6 +17,9 @@
 package com.machinelinking.api.client;
 
 /**
+ * The response for the <i>summarize</i> method.
+ *
+ * @see {@link com.machinelinking.api.client.APIClient#summarize(CompressionMethod, float, String, java.util.Map)}
  * @author Michele Mostarda (michele@machinelinking.com)
  */
 public class SummaryResponse {

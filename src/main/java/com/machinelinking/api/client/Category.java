@@ -19,7 +19,7 @@ package com.machinelinking.api.client;
 import java.net.URL;
 
 /**
- * Defines a <i>Wikipedia</i> category.
+ * A <i>Wikipedia</i> category.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */

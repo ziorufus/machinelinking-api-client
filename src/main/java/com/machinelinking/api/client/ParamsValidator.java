@@ -41,6 +41,7 @@ public class ParamsValidator {
     public static final String disambiguation = "disambiguation";
     public static final String link = "link";
     public static final String form = "form";
+    public static final String topic = "topic";
     public static final String cross = "cross";
     public static final String category = "category";
     public static final String external = "external";
@@ -121,6 +122,7 @@ public class ParamsValidator {
         addParam("annotate", disambiguation, ParamType.Bool, true);
         addParam("annotate", link, ParamType.Bool, true);
         addParam("annotate", form, ParamType.Bool, true);
+        addParam("annotate", topic, ParamType.Bool, true);
         addParam("annotate", cross, ParamType.Bool, true);
         addParam("annotate", category, ParamType.Bool, true);
         addParam("annotate", external, ParamType.Bool, true);

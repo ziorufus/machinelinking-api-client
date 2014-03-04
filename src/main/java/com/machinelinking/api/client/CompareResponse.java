@@ -17,8 +17,9 @@
 package com.machinelinking.api.client;
 
 /**
- * Defines the response for the <i>compare</i> method.
+ * The response for the <i>compare</i> method.
  *
+ * @see {@link com.machinelinking.api.client.APIClient#compare(ComparisonMethod, String, String)}
  * @author Michele Mostarda (michele@machinelinking.com)
  */
 public class CompareResponse implements Response {

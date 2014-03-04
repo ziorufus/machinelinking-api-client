@@ -17,6 +17,8 @@
 package com.machinelinking.api.client;
 
 /**
+ * A phrase in a text with relevance and bounds.
+ *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
 public class Summary {

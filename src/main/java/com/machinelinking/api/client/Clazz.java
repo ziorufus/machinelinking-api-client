@@ -19,7 +19,7 @@ package com.machinelinking.api.client;
 import java.net.URL;
 
 /**
- * Defines a classification based on a <i>Wikipedia</i> class.
+ * A classification based on a <i>Wikipedia</i> class.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
