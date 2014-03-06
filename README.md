@@ -3,6 +3,17 @@ machinelinking-api-client
 
 This repo provides the official Java client for the [MachineLinking](http://machinelinking.com/) API.
 
+# Run tests
+
+Before running tests please obtains a ML APP ID and KEY by registering at https://machinelinking.3scale.net/login .
+Then either replace the APP ID and Key in
+
+   com.machinelinking.api.client.TestConstants
+
+or set it as system properties while running Maven:
+
+   mvn -Dml.app.id=0ccb23d8 -Dml.app.key=8b09c08d07661be74c7b5171a4a4f1bd clean test
+
 # Include with Maven
 
 1 - Include a custom repository (hosted by GitHub).

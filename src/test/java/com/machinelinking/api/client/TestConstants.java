@@ -29,9 +29,9 @@ public class TestConstants {
      *************************************************************************************/
 
     /**  Application ID. */
-    public static final String APP_ID  = "my.appid";
+    public static final String APP_ID  = System.getProperty("ml.app.id", "missing.app.id");
     /**  Application KEY. */
-    public static final String APP_KEY = "my.appkey";
+    public static final String APP_KEY = System.getProperty("ml.app.key", "missing.app.key");
 
     private TestConstants() {}
 
