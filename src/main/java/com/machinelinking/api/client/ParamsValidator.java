@@ -65,6 +65,13 @@ public class ParamsValidator {
                 return v.toString();
             }
         },
+        Int {
+            @Override
+            String validate(Object v) {
+                if(!(v instanceof Integer)) throw new IllegalArgumentException("Expected Integer.");
+                return Integer.toString((Integer)v);
+            }
+        },
         Float {
             @Override
             String validate(Object v) {
@@ -124,7 +131,7 @@ public class ParamsValidator {
         addParam("annotate", form, ParamType.Bool, true);
         addParam("annotate", topic, ParamType.Bool, true);
         addParam("annotate", cross, ParamType.Bool, true);
-        addParam("annotate", category, ParamType.Bool, true);
+        addParam("annotate", category, ParamType.Int, 1);
         addParam("annotate", external, ParamType.Bool, true);
         addParam("annotate", _abstract, ParamType.Bool, true);
         addParam("annotate", _class, ParamType.Bool, true);
