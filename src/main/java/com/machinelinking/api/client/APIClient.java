@@ -141,7 +141,7 @@ public class APIClient {
             properties.put(ParamsValidator.app_id, appId);
             properties.put(ParamsValidator.app_key, appKey);
             StringBuilder data = ParamsValidator.getInstance().buildRequest(group, properties);
-            httpURLConnection.addRequestProperty("Content-Length", Integer.toString(data.length()));
+            httpURLConnection.addRequestProperty("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
 
             DataOutputStream dataOutputStream = new DataOutputStream(
                     httpURLConnection.getOutputStream());
