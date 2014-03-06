@@ -15,7 +15,8 @@
  */
 
 /**
- * Client to access the <a href="http://www.machinelinking.com/wp/documentation/">MachineLinking API</a>
+ * Client to access the <a href="http://www.machinelinking.com/wp/documentation/">MachineLinking API</a>.
+ * Read the <a href="http://www.machinelinking.com/wp/reference/java/">complete java reference</a>.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */

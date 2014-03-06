@@ -23,9 +23,15 @@ package com.machinelinking.api.client;
  */
 public class TestConstants {
 
-    // Demo User credentials.
-    public static final String APP_ID  = "0ccb23d8";
-    public static final String APP_KEY = "7ad370d3f107133120712c40b30f6dec";
+    /*************************************************************************************
+     NOTE: these test cases require a valid application ID and KEY. To get a free one
+     please refer to https://machinelinking.3scale.net/login
+     *************************************************************************************/
+
+    /**  Application ID. */
+    public static final String APP_ID  = "my.appid";
+    /**  Application KEY. */
+    public static final String APP_KEY = "my.appkey";
 
     private TestConstants() {}
 
