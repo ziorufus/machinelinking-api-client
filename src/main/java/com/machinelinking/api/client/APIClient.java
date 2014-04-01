@@ -334,7 +334,7 @@ public class APIClient {
                 );
                 keywords[i] = keyword;
             }
-            return new AnnotationResponse(lang, keywords, toTopics(annotation.getJSONArray("topic")), cost);
+            return new AnnotationResponse(lang, keywords, toTopics(annotation.optJSONArray("topic")), cost);
         } catch (JSONException jsone) {
             throw new APIClientException("An error occurred while parsing the /annotate JSON data.", jsone);
         }
