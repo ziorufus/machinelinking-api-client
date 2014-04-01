@@ -12,7 +12,7 @@ Then either replace the APP ID and Key in
 
 or set it as system properties while running Maven:
 
-   mvn -Dml.app.id=0ccb23d8 -Dml.app.key=8b09c08d07661be74c7b5171a4a4f1bd clean test
+   mvn -Dml.app.id=<APP_ID> -Dml.app.key=<APP_KEY> clean test
 
 # Include with Maven
 
