@@ -35,7 +35,7 @@ or set it as system properties while running Maven:
 <dependency>
     <groupId>com.machinelinking</groupId>
     <artifactId>api-client</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
 </dependency>
 ```
 
