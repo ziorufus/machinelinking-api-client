@@ -1,0 +1,5 @@
+language: java
+jdk:
+- oraclejdk7
+before_script:
+  secure: g97uskNINi1D2eqdhDSvlVJkuwv0VYEONXLaG5iZ8XEg6INBhwiRI4Ujb6pPJksWv37tzeGv1zmOpQFRwXbv4PKDiwo4l4chm/MrwIrBvVZ17u0omREC3TeIk98LpkiBtY2HIml+55JPTvI5egS8Sn0Ga9x17ZKbtuKe/ftk3sY=
