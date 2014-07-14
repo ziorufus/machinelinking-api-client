@@ -3,6 +3,9 @@ machinelinking-api-client
 
 This repo provides the official Java client for the [MachineLinking](http://machinelinking.com/) API.
 
+[![Build Status](https://travis-ci.org/michelemostarda/machinelinking-api-client.svg?branch=master)](https://travis-ci.org/michelemostarda/machinelinking-api-client)
+
+
 # Run tests
 
 Before running tests please obtains a ML APP ID and KEY by registering at https://machinelinking.3scale.net/login .
