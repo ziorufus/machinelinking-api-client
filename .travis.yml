@@ -1,8 +1,11 @@
 language: java
 jdk:
 - oraclejdk7
-before_script: export JAVA_OPTS="-Dml.app.id=${APPID} -Dml.app.key=${APPKEY}"
+script:
+  - sbt -Dml.app.id=${APPID} -Dml.app.key=${APPKEY}
 env:
   global:
+  # travis encrypt APPID=xxxxxxxx --add env.global
   - secure: cazRR/S5kZzKG21ivhyJ9gknyHXGzsMSXhL/7ES2ty9rLd4j5PiHKFYbxobXApvs5R3QlDqCIzoMm2N6WqQJdk0Pot/mYFKNKzH+Wnvs1/4ExgEv7kxpuxAheYUSGccLc11Nz5MVIWazYm3XlV2+uqhqRPLH5KnlCmWWR8oD2uM=
+  # travis encrypt APPKEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxx --add env.global
   - secure: PohWvnMeqI9/kHESP5Sjh0W7CerGjM2VQPqdbajQ3+KXRCn6jmakm+8QRaDdleFpphHQhjo5xrD3YTVzeYRxl94uRKeEbe+ErblPMdgXoWjuKtrAoZg9EUCHY+Zu6c3qbn/CDPxU6w2pGicFElqUg4/Xj8hVLKaKBY+pP9k12j8=
