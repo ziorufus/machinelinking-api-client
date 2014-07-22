@@ -1,5 +1,6 @@
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
 import java.net.URL;
 
 /**
@@ -7,7 +8,7 @@ import java.net.URL;
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class Topic {
+public class Topic implements Serializable {
 
     private final String label;
     private final URL url;

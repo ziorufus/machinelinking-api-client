@@ -16,6 +16,7 @@
 
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
 import java.net.URL;
 
 /**
@@ -23,7 +24,7 @@ import java.net.URL;
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class Image {
+public class Image implements Serializable {
 
     private final URL image;
     private final URL thumb;

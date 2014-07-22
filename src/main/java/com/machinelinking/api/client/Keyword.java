@@ -16,6 +16,7 @@
 
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -23,7 +24,7 @@ import java.util.Arrays;
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class Keyword {
+public class Keyword implements Serializable {
 
     private final String form;
 

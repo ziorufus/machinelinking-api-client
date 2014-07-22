@@ -16,12 +16,14 @@
 
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
+
 /**
  * Defines a text N-gram.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class NGram {
+public class NGram implements Serializable {
 
     private int start;
     private int end;

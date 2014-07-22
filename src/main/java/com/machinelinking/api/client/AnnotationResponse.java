@@ -16,6 +16,7 @@
 
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -24,7 +25,7 @@ import java.util.Arrays;
  * @see {@link com.machinelinking.api.client.APIClient#annotate(String, java.util.Map)}
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class AnnotationResponse implements Response {
+public class AnnotationResponse implements Response, Serializable {
 
     private final String lang;
 

@@ -15,12 +15,14 @@
  */
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
+
 /**
  * Alternative form in annotation.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class Alt {
+public class Alt implements Serializable {
 
     private final String form;
     private final double freq;

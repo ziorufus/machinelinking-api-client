@@ -16,12 +16,14 @@
 
 package com.machinelinking.api.client;
 
+import java.io.Serializable;
+
 /**
  * Defines a cross language.
  *
  * @author Michele Mostarda (michele@machinelinking.com)
  */
-public class Cross {
+public class Cross implements Serializable {
 
     private final String lang;
     private final String page;
